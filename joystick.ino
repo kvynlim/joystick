@@ -1,7 +1,8 @@
 uint16_t V0=0,V1=0,V2=0,V3=0;
 uint8_t V0_PWM=0,V1_PWM=0,V2_PWM=0,V3_PWM=0;
 
-void setup() {Serial.begin(9600);}
+void setup() {//Serial.begin(9600);
+}
 
 void loop() {pwm_sbus();}
 
