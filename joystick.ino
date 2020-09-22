@@ -1,6 +1,7 @@
 uint16_t V0=0,V1=0,V2=0,V3=0;
 uint8_t V0_PWM=0,V1_PWM=0,V2_PWM=0,V3_PWM=0;
 volatile byte state = LOW;
+static const uint8_t MIN_TRIM = 10;
 
 void setup() {
   //Serial.begin(9600);
@@ -39,6 +40,10 @@ void read_joystick() {
   V1 = analogRead(A1); // Pitch
   V2 = analogRead(A2); // Throttle
   V3 = analogRead(A3); // Yaw
+  if (V0 < MIN_TRIM) {V0 = MIN_TRIM;}
+  if (V1 < MIN_TRIM) {V0 = MIN_TRIM;}
+  if (V2 < MIN_TRIM) {V0 = MIN_TRIM;}
+  if (V3 < MIN_TRIM) {V0 = MIN_TRIM;}
 }
 
 void blink() {
