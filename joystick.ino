@@ -13,7 +13,7 @@ void loop() {pwm_sbus();}
 void pwm_sbus() {
   read_joystick();
   V0_PWM = map(V0, 0, 1023, 110, 250);
-  V1_PWM = map(V1, 0, 1023, 110, 250);
+  V1_PWM = map(V1, 0, 1023, 250, 110);
   V2_PWM = map(V2, 0, 1023, 250, 110);
   V3_PWM = map(V3, 0, 1023, 110, 250);
   analogWrite(3, V0_PWM);
