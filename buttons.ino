@@ -9,14 +9,14 @@ void setup() {
 void loop() {pwm_sbus();}
 
 void pwm_sbus() {
-  analogWrite(10, 110);
+  analogWrite(9, 110);
   analogWrite(11, 110);
   
   if (state == HIGH) {
-    analogWrite(9, 250); 
+    analogWrite(10, 250); 
   }
   else if (state == LOW) {
-    analogWrite(9, 110);
+    analogWrite(10, 110);
   }
 }
 
