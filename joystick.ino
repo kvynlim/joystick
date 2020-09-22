@@ -41,9 +41,9 @@ void read_joystick() {
   V2 = analogRead(A2); // Throttle
   V3 = analogRead(A3); // Yaw
   if (V0 < MIN_TRIM) {V0 = MIN_TRIM;}
-  if (V1 < MIN_TRIM) {V0 = MIN_TRIM;}
-  if (V2 < MIN_TRIM) {V0 = MIN_TRIM;}
-  if (V3 < MIN_TRIM) {V0 = MIN_TRIM;}
+  if (V1 < MIN_TRIM) {V1 = MIN_TRIM;}
+  if (V2 < MIN_TRIM) {V2 = MIN_TRIM;}
+  if (V3 < MIN_TRIM) {V3 = MIN_TRIM;}
 }
 
 void blink() {
